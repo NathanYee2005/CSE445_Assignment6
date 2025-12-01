@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>TryIt – WebDownload (REST)</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; }
+    input, button, textarea { font: inherit; }
+    .row { display: flex; gap: .5rem; }
+    .row > input { flex: 1; }
+    textarea { width: 100%; height: 320px; white-space: pre; }
+    small { color:#666; }
+  </style>
+</head>
+<body>
+  <h1>WebDownload (REST)</h1>
+  <p><small>Downloads a web page over HTTP/HTTPS and returns the raw HTML as <code>text/plain</code>.</small></p>
+  <p>GET <code>/api/web/download?url=&lt;http/https URL&gt;</code></p>
+
+  <div class="row">
+    <input id="u" placeholder="https://example.com" value="https://example.com" />
+    <button id="btn">Download</button>
+  </div>
+
+  <p><strong>Response</strong></p>
+  <textarea id="out" readonly></textarea>
+
+  <script>
+    const endpoint = new URL('/api/web/download', window.location);
+    function go() {
+      const url = document.getElementById('u').value.trim();
+      const out = document.getElementById('out');
+      if (!url) { alert('Enter a URL'); return; }
+      out.value = 'Fetching...';
+      fetch(endpoint + '?url=' + encodeURIComponent(url))
+        .then(async r => {
+          const text = await r.text();
+          out.value = r.ok ? text : `HTTP ${r.status} ${r.statusText}\n\n${text}`;
+        })
+        .catch(e => out.value = 'Error: ' + e.message);
+    }
+    document.getElementById('btn').onclick = go;
+    document.getElementById('u').addEventListener('keydown', e => {
+      if (e.key === 'Enter') { e.preventDefault(); go(); }
+    });
+  </script>
+</body>
+</html>

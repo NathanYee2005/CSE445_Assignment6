@@ -24,48 +24,120 @@ namespace WebApplication1
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// GlobalAsaxLinkButton1 control.
+        /// btnMember control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton GlobalAsaxLinkButton1;
+        protected global::System.Web.UI.WebControls.Button btnMember;
 
         /// <summary>
-        /// UserControlLinkButton2 control.
+        /// btnStaff control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton UserControlLinkButton2;
+        protected global::System.Web.UI.WebControls.Button btnStaff;
 
         /// <summary>
-        /// ServiceLinkButton control.
+        /// lnkSoapTryIt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton ServiceLinkButton;
+        protected global::System.Web.UI.WebControls.HyperLink lnkSoapTryIt;
 
         /// <summary>
-        /// MemberLinkButton control.
+        /// lnkRestTryIt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton MemberLinkButton;
+        protected global::System.Web.UI.WebControls.HyperLink lnkRestTryIt;
 
         /// <summary>
-        /// StaffLinkButton control.
+        /// lnkGlobalAsaxTryIt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton StaffLinkButton;
+        protected global::System.Web.UI.WebControls.HyperLink lnkGlobalAsaxTryIt;
+
+        /// <summary>
+        /// lnkUserControlTryIt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkUserControlTryIt;
+
+        /// <summary>
+        /// lnkServiceTryIt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkServiceTryIt;
+
+        /// <summary>
+        /// txtNick control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNick;
+
+        /// <summary>
+        /// btnSaveNick control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveNick;
+
+        /// <summary>
+        /// lblNick control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNick;
+
+        /// <summary>
+        /// txtHashInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtHashInput;
+
+        /// <summary>
+        /// btnHash control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnHash;
+
+        /// <summary>
+        /// txtHashOutput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtHashOutput;
     }
 }

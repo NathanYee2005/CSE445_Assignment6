@@ -1,0 +1,5 @@
+This assignment was locked Oct 21 at 11:59pm.
+The aim of this assignment is to make sure that you understand and are familiar with the concepts covered in the lectures, including service development, service registration, service deployment, service hosting, service proxy, service binding, service invocation, and application building using your own services and public services. By the end of the assignment, you should have applied these concepts in programming your services, testing your services, and have used your own services and public services to compose a simple website application.
+Read the Instructions for the Assignment here: 
+
+WebStrar Server Deployment is not required for Assignment 3, but it is required for Assignment 5. You can practice WebStrar Server Deployment in Assignment 3 by following the documents:

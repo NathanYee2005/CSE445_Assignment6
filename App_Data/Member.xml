@@ -4,4 +4,11 @@
     <UserName>AhmedAl</UserName>
     <PasswordHash>fc2f010eea3de652bc72a511cc8e24c5b673557555bbbf0cbf11e15597dcb3bb</PasswordHash>
   </Member>
+  <member name="AhmedAl" hash="f61ed05810e2fa5f3742d015104357686f16158d202fb10dd3aa070b95c75364" />
+  <user name="AhmedAl" pwd="fc2f010eea3de652bc72a511cc8e24c5b673557555bbbf0cbf11e15597dcb3bb" />
+  <Member>
+    <Username>AhmedAl</Username>
+    <PasswordHash>fc2f010eea3de652bc72a511cc8e24c5b673557555bbbf0cbf11e15597dcb3bb</PasswordHash>
+    <Role>Member</Role>
+  </Member>
 </Members>

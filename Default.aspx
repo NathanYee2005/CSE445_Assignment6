@@ -38,6 +38,22 @@
                     </tr>
 
                     <tr>
+                        <td>Member self-enrollment</td>
+                        <td>GUI + XML</td>
+                        <td>Member sign-up, login, and password change using Member.xml.</td>
+                        <td>Ahmed Almoshawer</td>
+                        <td>Self-enrollment section on Default.aspx</td>
+                    </tr>
+
+                    <tr>
+                        <td>Member.aspx</td>
+                        <td>GUI</td>
+                        <td>Member-only page, visible only to authenticated members.</td>
+                        <td>Ahmed Almoshawer</td>
+                        <td>Member.aspx</td>
+                    </tr>
+
+                    <tr>
                         <td>SOAP text services</td>
                         <td>SOAP / WSDL</td>
                         <td>WordFilter, WordCountText, WordCountFromUrl, Top10ContentWords.</td>
@@ -103,6 +119,69 @@
                 <asp:Button ID="btnStaff" runat="server"
                             Text="Staff Page"
                             OnClick="btnStaff_Click" />
+            </p>
+
+            
+
+            <h2>Self-enrollment (Members)</h2>
+
+            <h3>New member sign-up</h3>
+            <p>Username:
+                <asp:TextBox ID="txtSignupUser" runat="server" />
+            </p>
+            <p>Password:
+                <asp:TextBox ID="txtSignupPass" runat="server" TextMode="Password" />
+            </p>
+            <p>Confirm password:
+                <asp:TextBox ID="txtSignupConfirm" runat="server" TextMode="Password" />
+            </p>
+            <p>
+                <asp:Button ID="btnSignUp" runat="server" Text="Sign up"
+                            OnClick="btnSignUp_Click" />
+            </p>
+            <p>
+                <asp:Label ID="lblSignUpMsg" runat="server" />
+            </p>
+
+            <h3>Login</h3>
+            <p>Username:
+                <asp:TextBox ID="txtLoginUser" runat="server" />
+            </p>
+            <p>Password:
+                <asp:TextBox ID="txtLoginPass" runat="server" TextMode="Password" />
+            </p>
+            <p>
+                <asp:Button ID="btnLogin" runat="server" Text="Log in"
+                            OnClick="btnLogin_Click" />
+            </p>
+            <p>
+                <asp:Label ID="lblLoginMsg" runat="server" />
+            </p>
+
+            <h3>Change password</h3>
+            <p>Username:
+                <asp:TextBox ID="txtChangeUser" runat="server" />
+            </p>
+            <p>Old password:
+                <asp:TextBox ID="txtChangeOld" runat="server" TextMode="Password" />
+            </p>
+            <p>New password:
+                <asp:TextBox ID="txtChangeNew" runat="server" TextMode="Password" />
+            </p>
+            <p>Confirm new password:
+                <asp:TextBox ID="txtChangeConfirm" runat="server" TextMode="Password" />
+            </p>
+            <p>
+                <asp:Button ID="btnChangePwd" runat="server" Text="Change password"
+                            OnClick="btnChangePwd_Click" />
+            </p>
+            <p>
+                <asp:Label ID="lblChangeMsg" runat="server" />
+            </p>
+
+            <p>
+                <asp:Button ID="btnLogout" runat="server" Text="Log out"
+                            OnClick="btnLogout_Click" />
             </p>
 
             <h2>TryIt links</h2>

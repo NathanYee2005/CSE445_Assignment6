@@ -9,6 +9,25 @@
 <body>
     <form id="form3" runat="server">
         <div>
+            <h1>Staff Page</h1>
+            <p>
+                Logged in as:
+                <asp:Label ID="lblUser" runat="server" />
+            </p>
+
+            <p>
+                This page is only visible to authenticated staff.
+                Administrators can open the Staff.xml to add more user credentials.
+            </p>
+
+            <p>
+                <asp:Button ID="btnBackHome" runat="server"
+                            Text="Back to Home"
+                            OnClick="btnBackHome_Click" />
+                <asp:Button ID="btnLogout" runat="server"
+                            Text="Log out"
+                            OnClick="btnLogout_Click" />
+            </p>
         </div>
     </form>
 </body>

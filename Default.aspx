@@ -86,25 +86,25 @@
                     </tr>
 
                     <tr>
-                        <td>Visit counter</td>
+                        <td>Error Event Handler</td>
                         <td>Global.asax</td>
-                        <td></td>
+                        <td>Throws a test error to demonstrate the functionality of the Error Event Handler</td>
                         <td>Nathan Yee</td>
                         <td>GlobalAsaxTryIt.aspx</td>
                     </tr>
 
                     <tr>
-                        <td>User control demo</td>
+                        <td>Demo Login Page</td>
                         <td>User control</td>
-                        <td></td>
+                        <td>Shows off an example User Control object that implements a demo login page</td>
                         <td>Nathan Yee</td>
                         <td>UserControlTryIt.aspx</td>
                     </tr>
 
                     <tr>
-                        <td>Local web service</td>
+                        <td>Word Count from file</td>
                         <td>Web service</td>
-                        <td></td>
+                        <td>Gets the word count from a .txt file upload.</td>
                         <td>Nathan Yee</td>
                         <td>ServiceTryIt.aspx</td>
                     </tr>
@@ -184,6 +184,28 @@
                             OnClick="btnLogout_Click" />
             </p>
 
+            <h2>Log-In (Staff)</h2>
+
+            <h3>Login</h3>
+            <p>Username:
+                <asp:TextBox ID="txtStaffUser" runat="server" />
+            </p>
+            <p>Password:
+                <asp:TextBox ID="txtStaffPass" runat="server" TextMode="Password" />
+            </p>
+            <p>
+                <asp:Button ID="btn" runat="server" Text="Log in"
+                            OnClick="btnStaffLogin_Click" />
+            </p>
+            <p>
+                <asp:Label ID="lblStaffLoginMsg" runat="server" />
+            </p>
+
+            <p>
+                <asp:Button ID="btnStaffLogout" runat="server" Text="Log out"
+                            OnClick="btnStaffLogout_Click" />
+            </p>
+
             <h2>TryIt links</h2>
             <ul>
                 <li>
@@ -203,7 +225,7 @@
                 <li>
                     <asp:HyperLink ID="lnkGlobalAsaxTryIt" runat="server"
                         NavigateUrl="GlobalAsaxTryIt.aspx">
-                        Global.asax visit counter TryIt
+                        Global.asax error handler TryIt
                     </asp:HyperLink>
                 </li>
                 <li>
@@ -215,7 +237,7 @@
                 <li>
                     <asp:HyperLink ID="lnkServiceTryIt" runat="server"
                         NavigateUrl="ServiceTryIt.aspx">
-                        Local web service TryIt
+                        Word count from file TryIt
                     </asp:HyperLink>
                 </li>
             </ul>

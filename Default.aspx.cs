@@ -17,6 +17,11 @@ namespace WebApplication1
             get { return Server.MapPath("~/App_Data/Member.xml"); }
         }
 
+        string StaffXmlPath
+        {
+            get { return Server.MapPath("~/App_Data/Staff.xml"); }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -34,6 +39,7 @@ namespace WebApplication1
             lblSignUpMsg.Text = "";
             lblLoginMsg.Text = "";
             lblChangeMsg.Text = "";
+            lblStaffLoginMsg.Text = "";
         }
 
         XDocument LoadMemberDoc()
@@ -240,6 +246,75 @@ namespace WebApplication1
             FormsAuthentication.SignOut();
             lblLoginMsg.ForeColor = Color.Green;
             lblLoginMsg.Text = "You are logged out.";
+        }
+
+        XDocument LoadStaffDoc()
+        {
+            if (!File.Exists(StaffXmlPath))
+            {
+                var docNew = new XDocument(
+                    new XElement("StaffMembers")
+                );
+                docNew.Save(StaffXmlPath);
+                return docNew;
+            }
+
+            return XDocument.Load(StaffXmlPath);
+        }
+
+        XElement FindStaff(XDocument doc, string username)
+        {
+            return doc.Root
+                .Elements("Staff")
+                .FirstOrDefault(x =>
+                    (string)x.Element("UserName") == username);
+        }
+
+        protected void btnStaffLogin_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+
+            var user = txtStaffUser.Text.Trim();
+            var pass = txtStaffPass.Text;
+
+            if (string.IsNullOrWhiteSpace(user) ||
+                string.IsNullOrWhiteSpace(pass))
+            {
+                lblStaffLoginMsg.ForeColor = Color.Red;
+                lblStaffLoginMsg.Text = "Enter username and password.";
+                return;
+            }
+
+            var doc = LoadStaffDoc();
+            var existing = FindStaff(doc, user);
+            if (existing == null)
+            {
+                lblStaffLoginMsg.ForeColor = Color.Red;
+                lblStaffLoginMsg.Text = "Invalid login.";
+                return;
+            }
+
+            var hash = SecurityTools.HashString(pass);
+            var stored = (string)existing.Element("PasswordHash");
+
+            if (!string.Equals(hash, stored, StringComparison.Ordinal))
+            {
+                lblStaffLoginMsg.ForeColor = Color.Red;
+                lblStaffLoginMsg.Text = "Invalid login.";
+                return;
+            }
+
+            FormsAuthentication.SetAuthCookie(user, false);
+            lblStaffLoginMsg.ForeColor = Color.Green;
+            lblStaffLoginMsg.Text = "Logged in as " + user + ".";
+        }
+
+        protected void btnStaffLogout_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            FormsAuthentication.SignOut();
+            lblStaffLoginMsg.ForeColor = Color.Green;
+            lblStaffLoginMsg.Text = "You are logged out.";
         }
     }
 }

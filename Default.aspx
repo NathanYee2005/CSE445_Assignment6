@@ -49,8 +49,24 @@
                         <td>Member.aspx</td>
                         <td>GUI</td>
                         <td>Member-only page, visible only to authenticated members.</td>
-                        <td>Ahmed Almoshawer</td>
+                        <td>Ahmed Almoshawer, Nathan Yee</td>
                         <td>Member.aspx</td>
+                    </tr>
+
+                    <tr>
+                        <td>Staff Login</td>
+                        <td>GUI + XML</td>
+                        <td>Staff login using Staff.xml.</td>
+                        <td>Ahmed Almoshawer, Nathan Yee</td>
+                        <td>Log-In (Staff) section on Default.aspx</td>
+                    </tr>
+
+                    <tr>
+                        <td>Staff.aspx</td>
+                        <td>GUI</td>
+                        <td>Staff-only page, visible only to authenticated staff members.</td>
+                        <td>Ahmed Almoshawer, Nathan Yee</td>
+                        <td>Staff.aspx</td>
                     </tr>
 
                     <tr>
@@ -210,14 +226,13 @@
             <ul>
                 <li>
                     <asp:HyperLink ID="lnkSoapTryIt" runat="server"
-                        NavigateUrl="http://localhost:51278/TryIt.aspx"
-                        Target="_blank">
+                        NavigateUrl="TryIt.aspx">
                         SOAP text services TryIt (WordFilter, WordCount*, Top10ContentWords)
                     </asp:HyperLink>
                 </li>
                 <li>
                     <asp:HyperLink ID="lnkRestTryIt" runat="server"
-                        NavigateUrl="https://localhost:44340/TryItRest.html"
+                        NavigateUrl="http://webstrar122.fulton.asu.edu/page2/TryItRest.html"
                         Target="_blank">
                         WebDownload REST TryIt
                     </asp:HyperLink>

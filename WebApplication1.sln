@@ -1,14 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36429.23
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34407.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1.csproj", "{500DF16D-1932-4FA7-962B-FB38279ACEFD}"
-	ProjectSection(ProjectDependencies) = postProject
-		{399829AB-F2D6-4C38-9298-0EA29F5E83F2} = {399829AB-F2D6-4C38-9298-0EA29F5E83F2}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServices", "WcfServices\WcfServices.csproj", "{399829AB-F2D6-4C38-9298-0EA29F5E83F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestServices", "RestServices\RestServices.csproj", "{2ADC580D-C38E-4F4A-B81F-79DA416842C9}"
 EndProject
@@ -31,10 +26,6 @@ Global
 		{500DF16D-1932-4FA7-962B-FB38279ACEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{500DF16D-1932-4FA7-962B-FB38279ACEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{500DF16D-1932-4FA7-962B-FB38279ACEFD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{399829AB-F2D6-4C38-9298-0EA29F5E83F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{399829AB-F2D6-4C38-9298-0EA29F5E83F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{399829AB-F2D6-4C38-9298-0EA29F5E83F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{399829AB-F2D6-4C38-9298-0EA29F5E83F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2ADC580D-C38E-4F4A-B81F-79DA416842C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2ADC580D-C38E-4F4A-B81F-79DA416842C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ADC580D-C38E-4F4A-B81F-79DA416842C9}.Release|Any CPU.ActiveCfg = Release|Any CPU

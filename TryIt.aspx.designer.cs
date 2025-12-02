@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WcfServices
+namespace WebApplication1
 {
 
 

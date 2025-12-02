@@ -92,6 +92,7 @@
     <Content Include="Member.aspx" />
     <Content Include="ServiceTryIt.aspx" />
     <Content Include="Staff.aspx" />
+    <Content Include="TryIt.aspx" />
     <Content Include="UserControlTryIt.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -152,6 +153,13 @@
     </Compile>
     <Compile Include="Staff.aspx.designer.cs">
       <DependentUpon>Staff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TryIt.aspx.cs">
+      <DependentUpon>TryIt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TryIt.aspx.designer.cs">
+      <DependentUpon>TryIt.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserControlTryIt.aspx.cs">
       <DependentUpon>UserControlTryIt.aspx</DependentUpon>

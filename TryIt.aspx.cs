@@ -1,43 +1,24 @@
 ﻿using System;
-using System.ServiceModel;
-using WcfServices;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.IO;
 
-namespace WcfServices
+namespace WebApplication1
 {
     public partial class TryIt : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var baseUrl = Request.Url.GetLeftPart(UriPartial.Authority);
-            var svcUrl = new Uri(new Uri(baseUrl), ResolveUrl("~/Service1.svc")).ToString();
-            litSvcUrl.Text = $"<a href=\"{svcUrl}\">{svcUrl}</a>";
-            litWsdlUrl.Text = $"<a href=\"{svcUrl}?wsdl\">{svcUrl}?wsdl</a>";
 
-            if (!IsPostBack)
-            {
-                txtCountUrlIn.Text = "https://example.com";
-                txtTopUrlIn.Text = "https://example.com";
-            }
         }
 
-        // Creates a real HTTP client for IService1 using BasicHttpBinding
-        private IService1 CreateClient()
+        private ServiceReference3.Service1Client CreateClient()
         {
-            var baseUrl = Request.Url.GetLeftPart(UriPartial.Authority);
-            var svcUrl = new Uri(new Uri(baseUrl), ResolveUrl("~/Service1.svc"));
-
-            var binding = new BasicHttpBinding
-            {
-                MaxReceivedMessageSize = 10 * 1024 * 1024, // allow big pages
-                ReaderQuotas =
-                {
-                    MaxStringContentLength = 10 * 1024 * 1024
-                }
-            };
-
-            var address = new EndpointAddress(svcUrl);
-            var factory = new ChannelFactory<IService1>(binding, address);
-            return factory.CreateChannel();
+            ServiceReference3.Service1Client s = new ServiceReference3.Service1Client();
+            return s;
         }
 
         protected void btnFilter_Click(object sender, EventArgs e)
